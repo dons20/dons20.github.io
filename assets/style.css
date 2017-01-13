@@ -1,25 +1,24 @@
 body section.custom {
-    font-family: "Motiva Sans", Sans-serif;
-    font-size: 13px;
-    overflow-wrap: break-word;
-}
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 13px;
+  line-height: 1.3rem;
+  overflow-wrap: break-word; }
 
 div.container {
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
-}
-
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75); }
 div.editable {
-    min-height: 300px;
-}
-
+  min-height: 300px; }
 div.h1 {
-    color: #eee;
-}
+  color: #eee; }
 
 .jumbotron {
-    background: #1A2980; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1A2980 , #26D0CE); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #1A2980 , #26D0CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
+  background: #1A2980;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1A2980, #26D0CE);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1A2980, #26D0CE);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+/*# sourceMappingURL=style.css.map */
