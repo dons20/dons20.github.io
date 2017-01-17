@@ -49,6 +49,13 @@ div.container-fluid {
   padding-left: 0px;
   padding-right: 0px; }
 
+footer {
+  text-align: center;
+  background-color: #111b52;
+  color: #eee;
+  margin-top: 6rem;
+  padding: 3rem 0; }
+
 textarea {
   min-height: 15rem;
   min-width: 60rem;
