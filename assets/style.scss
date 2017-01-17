@@ -1,10 +1,74 @@
 $primary-color: #1A2980;
 $secondary-color: #26D0CE;
+$text-color: #eee;
+$body-color: #acb2b8;
+$heading-color: #5aa9d6;
+$link-color: #ebebeb;
 $primary-font: "Motiva Sans", Sans-serif;
 $font-size: 13px;
 $line-height: 1.3rem;
 
-body section.custom {
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin box-shadow($args...) {
+      -webkit-box-shadow: $args;
+      -moz-box-shadow: $args;
+      box-shadow: $args;
+}
+
+#editorWindow {
+  @include box-shadow(0 0 10px #fff);
+  @include transition(box-shadow 0.2s linear);
+
+  &.active {
+    @include box-shadow(0 0 10px #000);  
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.display-4 {
+  color: $text-color;
+}
+
+.editor-toolbar {
+  text-align: center;
+}
+
+.jumbotron {
+  background: $primary-color;
+  background: -webkit-linear-gradient(to right, $primary-color, $secondary-color);
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.markup {
+  background-color: #111A24;
+  color: $body-color;
+  white-space: pre-wrap;
+  font-family: $primary-font;
+}
+
+.preview {
+  @extend .markup;
+  & h1 {
+    color: $heading-color;
+  }
+  & a {
+    color: $link-color;
+  }
+}
+
+body {
   font-family: $primary-font;
   font-size: $font-size;
   line-height: $line-height;
@@ -12,24 +76,17 @@ body section.custom {
 }
 
 div {
-  &.container {
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-  }
-  &.editable {
-    min-height: 300px;
-  }
-  &.h1 {
-    color: #eee;
+  &.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
-.jumbotron {
-  background: $primary-color;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, $primary-color, $secondary-color);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, $primary-color, $secondary-color);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+textarea {
+    min-height: 15rem;
+    min-width: 60rem;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+    margin-bottom: 2rem;
 }

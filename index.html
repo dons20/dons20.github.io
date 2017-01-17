@@ -5,33 +5,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link  rel="stylesheet" href="assets/style.min.css">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous" async></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous" async></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous" async></script>
-        <script src="https://cdn.tinymce.com/4/tinymce.min.js" async></script>
-         <script async>tinymce.init({ 
-            selector:'div.editable', 
-            toolbar: [
-                 'header | bold italic underline | strikethrough | spoiler noparse',
-                  'link | unorderedlist orderedlist'
-             ],
-            menubar: false,
-            themes: "inlite",
-            inline: true
-            });</script>
+        <link rel="stylesheet" href="assets/style.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/markitup/skins/markitup/style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/markitup/sets/default/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <link href="https://cdn.quilljs.com/1.1.10/quill.snow.css" rel="stylesheet">
+        
+        <!--Bootstrap 4 inclusions-->
+        <script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        <!--Text Editor Quill-->
+        <script defer src="https://cdn.quilljs.com/1.1.10/quill.min.js"></script>
+
+        <!--Local Scripts-->
+        <script defer src="assets/scripts.js"></script>
     </head>
     <body>
-        <section class="custom">
-            <div class="jumbotron">
-                <div class="h1">Steam Review Formatter and Editor</div>
-            </div>    
-            <div class="container editable"></div>
-        </section>
-        <section>
-            <div class="float-md-center">
-                <a href="https://github.com/dons20/dons20.github.io">Fork this on GitHub!</a>
+        <div class="container-fluid">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Steam Review Editor</h1>
+                </div>
             </div>
-        </section>
+        </div>   
+        <div id="editorWindow" class="container mb-3 p-0">
+            <div id="editor">
+                <p>Hello There!</p>
+                <p>Some initial <strong>bold</strong> text</p>
+            </div>
+        </div>
+        <div class="container col-4 mb-3">
+            <button id="showBtn" class="btn btn-block btn-outline-primary" type="button" data-toggle="collapse" data-target="#previewCollapse">Show Preview</button>
+        </div>
+        <div id="previewCollapse" class="collapse">
+            <div class="container mb-3">
+                <div class="row">
+                    <div id="markup" class="col markup"></div>
+                    <div id="preview" class="col preview"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
