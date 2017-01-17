@@ -24,10 +24,9 @@ $line-height: 1.3rem;
 
 #editorWindow {
   @include box-shadow(0 0 10px #fff);
-  @include transition(box-shadow 0.2s linear);
-
+  @include transition(box-shadow 0.2s ease);
   &.active {
-    @include box-shadow(0 0 10px #000);  
+    @include box-shadow(0 0 10px #000);
   }
 }
 

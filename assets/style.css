@@ -2,11 +2,11 @@
   -webkit-box-shadow: 0 0 10px #fff;
   -moz-box-shadow: 0 0 10px #fff;
   box-shadow: 0 0 10px #fff;
-  -webkit-transition: box-shadow 0.2s linear;
-  -moz-transition: box-shadow 0.2s linear;
-  -ms-transition: box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
-  transition: box-shadow 0.2s linear; }
+  -webkit-transition: box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  -ms-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease; }
   #editorWindow.active {
     -webkit-box-shadow: 0 0 10px #000;
     -moz-box-shadow: 0 0 10px #000;
