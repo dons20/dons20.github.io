@@ -1,56 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Steam Review Editor</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/style.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/markitup/skins/markitup/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/markitup/sets/default/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-        <link href="https://cdn.quilljs.com/1.1.10/quill.snow.css" rel="stylesheet">
-        
-        <!--Bootstrap 4 inclusions-->
-        <script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Web Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
 
-        <!--Text Editor Quill-->
-        <script defer src="https://cdn.quilljs.com/1.1.10/quill.min.js"></script>
+				<!-- Header -->
+					<header id="header">
+						<h1>Keno Clayton</h1>
+						<p>Programmer &bull; Writer &bull; Gamer</p>
+						<nav>
+							<ul>
+								<li><a href="http://twitter.com/kcinnovations" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="http://facebook.com/kenoclayton" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/dons20" class="icon fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:keno.clayton15@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							</ul>
+						</nav>
+					</header>
 
-        <!--Local Scripts-->
-        <script defer src="assets/scripts.js"></script>
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">Steam Review Editor</h1>
-                </div>
-            </div>
-        </div>   
-        <div id="editorWindow" class="container mb-5 p-0">
-            <div id="editor">
-                <h1>Review of an Awesome Game!</h1>
-                <p><b>An Review you won't soon forget</b></p>
-                <p>Here are my thoughts about this game....</p>
-            </div>
-        </div>
-        <div class="container col-4 mb-4">
-            <button id="showBtn" class="btn btn-block btn-outline-primary" type="button" data-toggle="collapse" data-target="#previewCollapse">Show Preview</button>
-        </div>
-        <div id="previewCollapse" class="collapse">
-            <div class="container-fluid ml-5 mr-5">
-                <div class="row">
-                    <div class="col"><h1 class="lead">This is the markup for your review. Copy and paste it into steam and then publish your review!</h1></div>
-                    <div class="col"><h1 class="lead">Here's how your review will look when published</h1></div>
-                </div>
-                <div class="row">
-                    <div id="markup" class="col markup p-3 mr-3"></div>
-                    <div id="preview" class="col preview p-3"></div>
-                </div>
-            </div>
-        </div>
-    </body>
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Keno Clayton. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
 </html>
