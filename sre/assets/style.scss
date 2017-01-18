@@ -67,6 +67,18 @@ $line-height: 1.3rem;
   }
 }
 
+.spoiler {
+  background: black;
+  color: #aaa;
+  &:hover {
+    color: $text-color;
+  }
+}
+
+.ql-editor {
+  line-height: 1.5rem;
+}
+
 body {
   font-family: $primary-font;
   font-size: $font-size;

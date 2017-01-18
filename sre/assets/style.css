@@ -39,6 +39,15 @@
 .preview a {
   color: #ebebeb; }
 
+.spoiler {
+  background: black;
+  color: #aaa; }
+  .spoiler:hover {
+    color: #eee; }
+
+.ql-editor {
+  line-height: 1.5rem; }
+
 body {
   font-family: "Motiva Sans", Sans-serif;
   font-size: 13px;
