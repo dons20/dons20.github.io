@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="assets/markitup/skins/markitup/style.css" />
         <link rel="stylesheet" type="text/css" href="assets/markitup/sets/default/style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
@@ -13,7 +14,8 @@
         <link rel="stylesheet" href="assets/style.css">
         
         <!--Bootstrap 4 inclusions-->
-        <script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <!--<script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+        <script defer src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
@@ -35,8 +37,19 @@
                     <h1 class="display-4">Steam Review Editor</h1>
                 </div>
             </div>
-        </div>   
-        <div id="editorWindow" class="container mb-5 p-0">
+        </div>
+
+        <div id="help" class="container mb-5 fade">
+            <div class="row">
+                <div class="col tutorial">
+                    <a id="closeBtn" class="btn bg-inverse" role="button" data-toggle="tooltip" data-animation="false" data-placement="right" title="Close"><i class="fa fa-lg fa-close" aria-hidden="true"></i></a>
+                    <p>Steam Review Editor allows you to easily create and modify your reviews in real-time without having to manually apply steam markup tags. Simply type your review, hit "Copy to Clipboard", and paste it in Steam!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Editor Window Begins -->   
+        <div id="editorWindow" class="container mb-5 p-0 fade">
             <div id="toolbar">
                 <span class="ql-formats">
                     <select class="ql-header">
@@ -53,6 +66,7 @@
                     <button class="ql-strike" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Strikethrough"></button>
                     <button id="spoiler" class="ql-span fa fa-lg fa-low-vision" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Spoiler"></button>
                     <button class="ql-blockquote" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Blockquote"></button>
+                    <button class="ql-code" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="In-line (&quot;No-parse&quot;) Text"></button>
                     <button class="ql-code-block" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Pre-formatted Text"></button>
                 </span>
                 <span class="ql-formats">
@@ -69,8 +83,17 @@
             <div id="editor">
             </div>
         </div>
-        <div class="container col-4 mb-4">
-            <button id="showBtn" class="btn btn-block btn-outline-primary" type="button" data-toggle="collapse" data-target="#previewCollapse">Show Preview</button>
+        <div class="container fade">
+            <div class="row justify-content-md-center mb-4">
+                <div class="col-md-6">
+                    <button id="showBtn" class="btn btn-block btn-primary" type="button" data-toggle="collapse" data-target="#previewCollapse">Show Preview</button>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mb-4">
+                <div class="col-md-6">
+                    <button id="copyBtn" onClick="CopyToClipboard('markup')" class="btn btn-block btn-success" type="button" >Copy Markup to Clipboard</button>
+                </div>
+            </div>
         </div>
         <div id="previewCollapse" class="collapse">
             <div class="container-fluid ml-5 mr-5">
@@ -84,9 +107,12 @@
                 </div>
             </div>
         </div>
-        <footer class="easy-footer">
+        <div class="push"></div>
+        <footer id="footer" class="easy-footer fade">
             <div class="container">
-                <p class="lead">Made by K. Clayton<br>Copyright &copy; 2017</p>
+                <a href="http://twitter.com/kcinnovations"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
+                <p>Copyright &copy; 2017 Keno Clayton, Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>
+                </p>
             </div>
         </footer>
     </body>

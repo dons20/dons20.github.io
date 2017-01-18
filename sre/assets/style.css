@@ -1,3 +1,7 @@
+#closeBtn {
+  float: right;
+  margin: 1rem; }
+
 #editorWindow {
   -webkit-box-shadow: 0 0 10px #fff;
   -moz-box-shadow: 0 0 10px #fff;
@@ -12,6 +16,9 @@
     -moz-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000; }
 
+#editor {
+  min-height: 6rem; }
+
 .btn {
   cursor: pointer; }
 
@@ -22,10 +29,13 @@
   text-align: center; }
 
 .jumbotron {
-  background: #1A2980;
-  background: -webkit-linear-gradient(to right, #1A2980, #26D0CE);
-  background: linear-gradient(to right, #1A2980, #26D0CE);
+  /*@include box-shadow(0 10px 10px -6px #555);*/
+  background: #2c9eea;
+  background: -webkit-linear-gradient(90deg, #2c9eea, #4adbcf, #85a5dd);
+  background: linear-gradient(90deg, #2c9eea, #4adbcf, #85a5dd);
   font-variant: small-caps;
+  font-family: 'Monserrat', sans-serif;
+  text-shadow: 1px 1px 10px #222;
   text-align: center; }
 
 .markup, .preview {
@@ -48,22 +58,40 @@
 .ql-editor {
   line-height: 1.5rem; }
 
+a i {
+  color: white; }
+
 body {
+  background-color: #F7F7F7;
   font-family: "Motiva Sans", Sans-serif;
   font-size: 13px;
+  height: 100%;
   line-height: 1.3rem;
+  min-height: 100%;
   overflow-wrap: break-word; }
 
 div.container-fluid {
   padding-left: 0px;
   padding-right: 0px; }
+div.tutorial {
+  -webkit-box-shadow: 0 0 15px #777;
+  -moz-box-shadow: 0 0 15px #777;
+  box-shadow: 0 0 15px #777;
+  background-color: #fff;
+  border-radius: 10px 10px;
+  font-size: 19.5px;
+  line-height: 1.95rem;
+  padding: 1.5rem;
+  text-align: center;
+  width: 66.66%; }
 
 footer {
-  text-align: center;
-  background-color: #111b52;
+  background-color: #103a56;
   color: #eee;
-  margin-top: 6rem;
-  padding: 3rem 0; }
+  line-height: 1.69rem;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0.3rem 0; }
 
 textarea {
   min-height: 15rem;

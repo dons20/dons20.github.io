@@ -1,5 +1,6 @@
-$primary-color: #1A2980;
-$secondary-color: #26D0CE;
+$primary-color: #2c9eea;
+$secondary-color: #4adbcf;
+$tertiary-color: #85a5dd;
 $text-color: #eee;
 $body-color: #acb2b8;
 $heading-color: #5aa9d6;
@@ -22,12 +23,21 @@ $line-height: 1.3rem;
       box-shadow: $args;
 }
 
+#closeBtn {
+  float: right;
+  margin: 1rem;
+}
+
 #editorWindow {
   @include box-shadow(0 0 10px #fff);
   @include transition(box-shadow 0.2s ease);
   &.active {
     @include box-shadow(0 0 10px #000);
   }
+}
+
+#editor {
+  min-height: 6rem;
 }
 
 .btn {
@@ -43,10 +53,13 @@ $line-height: 1.3rem;
 }
 
 .jumbotron {
+  /*@include box-shadow(0 10px 10px -6px #555);*/
   background: $primary-color;
-  background: -webkit-linear-gradient(to right, $primary-color, $secondary-color);
-  background: linear-gradient(to right, $primary-color, $secondary-color);
+  background: -webkit-linear-gradient(90deg, $primary-color, $secondary-color, $tertiary-color);
+  background: linear-gradient(90deg, $primary-color, $secondary-color, $tertiary-color);
   font-variant: small-caps;
+  font-family: 'Monserrat', sans-serif;
+  text-shadow: 1px 1px 10px #222;
   text-align: center;
 }
 
@@ -79,10 +92,17 @@ $line-height: 1.3rem;
   line-height: 1.5rem;
 }
 
+a i{
+  color: white;
+}
+
 body {
+  background-color: #F7F7F7;
   font-family: $primary-font;
   font-size: $font-size;
+  height: 100%;
   line-height: $line-height;
+  min-height: 100%;
   overflow-wrap: break-word;
 }
 
@@ -91,21 +111,30 @@ div {
     padding-left: 0px;
     padding-right: 0px;
   }
+  &.tutorial {
+    @include box-shadow(0 0 15px #777);
+    background-color: #fff;
+    border-radius: 10px 10px;
+    font-size: $font-size*1.5;
+    line-height: $line-height*1.5;
+    padding: 1.5rem;
+    text-align: center;
+    width: 66.66%;
+  }
 }
 
 footer {
-  text-align: center;
-  background-color: #111b52;
+  background-color: #103a56;
   color: #eee;
-  margin-top: 6rem;
-  padding: 3rem 0;
+  line-height: $line-height*1.3;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0.3rem 0;
 }
 
 textarea {
     min-height: 15rem;
     min-width: 60rem;
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+    @include box-shadow(0px 0px 10px 3px rgba(0, 0, 0, 0.75));
     margin-bottom: 2rem;
 }
