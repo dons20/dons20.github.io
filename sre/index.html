@@ -4,6 +4,7 @@
         <title>Steam Review Editor</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/markitup/skins/markitup/style.css" />
         <link rel="stylesheet" type="text/css" href="assets/markitup/sets/default/style.css" />
@@ -15,6 +16,10 @@
         <script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        <!--Font Awesome-->
+        <script defer src="https://use.fontawesome.com/8be862904e.js"></script>
+
 
         <!--Text Editor Quill-->
         <script defer src="https://cdn.quilljs.com/1.1.10/quill.min.js"></script>
@@ -32,10 +37,36 @@
             </div>
         </div>   
         <div id="editorWindow" class="container mb-5 p-0">
+            <div id="toolbar">
+                <span class="ql-formats">
+                    <select class="ql-header">
+                        <option value="1"></option>
+                        <option></option>
+                    </select>                   
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-bold" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Bold"></button>
+                    <button class="ql-italic" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Italics"></button>
+                    <button class="ql-underline" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Underline"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-strike" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Strikethrough"></button>
+                    <button id="spoiler" class="ql-span fa fa-lg fa-low-vision" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Spoiler"></button>
+                    <button class="ql-blockquote" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Blockquote"></button>
+                    <button class="ql-code-block" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Pre-formatted Text"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-header" type="button" value="1" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Heading 1"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-list" type="button" value="ordered" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Ordered List"></button>
+                    <button class="ql-list" type="button" value="bullet" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Bulleted List"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-clean" data-toggle="tooltip" data-animation="false" data-placement="bottom" title="Clear Formatting"></button>
+                </span>
+            </div>
             <div id="editor">
-                <h1>Review of an Awesome Game!</h1>
-                <p><b>An Review you won't soon forget</b></p>
-                <p>Here are my thoughts about this game....</p>
             </div>
         </div>
         <div class="container col-4 mb-4">
