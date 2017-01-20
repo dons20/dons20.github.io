@@ -126,5 +126,5 @@ $(document).ready(function () {
     pushFooter();
     var fade = $(".fade");
     fade.css({ "opacity":"0"});
-    fade.fadeTo(1000, 1, "swing");
+    fade.fadeTo(500, 1, "swing");
 });
