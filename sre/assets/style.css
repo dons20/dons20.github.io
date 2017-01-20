@@ -102,6 +102,13 @@
 .preview h1 {
   color: #5aa9d6;
   font-size: 15px; }
+.preview pre {
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #acb2b8;
+  padding: 0.8rem;
+  width: 100%; }
 
 .spoiler {
   background: black;

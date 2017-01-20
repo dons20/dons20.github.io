@@ -162,6 +162,14 @@ $line-height: 1.3rem;
     color: $h1-color;
     font-size: 15px;
   }
+  & pre {
+    background: transparent;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: $body-color;
+    padding: 0.8rem;
+    width: 100%;
+  }
 }
 
 .spoiler {
