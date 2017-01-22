@@ -72,8 +72,21 @@
 .editor-toolbar {
   text-align: center; }
 
+.fa-inverse {
+  background: #2f89bc 5%;
+  background: linear-gradient(180deg, #2f89bc 5%, #17435c 95%);
+  background: -webkit-linear-gradient(legacy-direction(180deg, #2f89bc 5%, #17435c 95%));
+  color: black; }
+  .fa-inverse.hide {
+    -webkit-text-fill-color: transparent; }
+
+.fa-lg {
+  font-size: 17px !important; }
+
+.fa-2x {
+  font-size: 20px !important; }
+
 .jumbotron {
-  /*@include box-shadow(0 10px 10px -6px #555);*/
   background-color: #171a21;
   color: #b8b6b4;
   font-variant: small-caps;
@@ -89,26 +102,51 @@
   line-height: 17px;
   white-space: pre-line; }
 
-.preview a {
-  color: #ebebeb; }
-.preview blockquote {
-  border: 1px solid lightblue;
-  border-radius: 5px;
-  padding: 0.8rem;
-  width: 100%; }
-.preview code {
-  background: transparent;
-  color: #acb2b8; }
-.preview h1 {
-  color: #5aa9d6;
-  font-size: 15px; }
-.preview pre {
-  background: transparent;
-  border: 1px solid #555;
-  border-radius: 5px;
-  color: #acb2b8;
-  padding: 0.8rem;
-  width: 100%; }
+@media only screen and (min-width: 1200px) {
+  .preview {
+    min-width: 400px;
+    max-width: 400px; } }
+.preview {
+  overflow-wrap: break-word;
+  overflow: hidden; }
+  .preview a {
+    color: #ebebeb; }
+  .preview blockquote {
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 0.8rem;
+    width: 100%; }
+  .preview code {
+    background: transparent;
+    color: #acb2b8; }
+  .preview h1 {
+    color: #5aa9d6;
+    font-size: 15px; }
+  .preview pre {
+    background: transparent;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #acb2b8;
+    padding: 0.8rem;
+    width: 100%; }
+
+.preview-container {
+  background-color: #111A24; }
+
+.preview-top {
+  background-color: #111A24;
+  color: #63B7E9; }
+  .preview-top p {
+    color: #8091a2; }
+    .preview-top p.name {
+      color: #c6d4df;
+      font-weight: bold; }
+  .preview-top .next {
+    background: rgba(0, 0, 0, 0.2); }
+
+.recommended {
+  font-size: 16px;
+  color: #d6d7d8; }
 
 .spoiler {
   background: black;

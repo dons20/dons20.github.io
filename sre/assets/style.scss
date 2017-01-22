@@ -123,9 +123,24 @@ $line-height: 1.3rem;
   text-align: center;
 }
 
+.fa-inverse {
+  @include gradient(180deg, $primary-button-gradient);
+  color: black;
+  &.hide {
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.fa-lg {
+  font-size: 17px !important;
+}
+
+.fa-2x {
+  font-size: 20px !important;
+}
+
 
 .jumbotron {
-  /*@include box-shadow(0 10px 10px -6px #555);*/
   background-color: $header-background-color;
   color: $header-font-color;
   font-variant: small-caps;
@@ -143,8 +158,17 @@ $line-height: 1.3rem;
   white-space: pre-line;
 }
 
+@media only screen and (min-width: 1200px) {
+    .preview {
+      min-width: 400px;
+      max-width: 400px;
+    }
+}
+
 .preview {
   @extend .markup;
+  overflow-wrap: break-word;
+  overflow: hidden;
   & a {
     color: $link-color;
   }
@@ -170,6 +194,30 @@ $line-height: 1.3rem;
     padding: 0.8rem;
     width: 100%;
   }
+}
+
+.preview-container {
+  background-color: #111A24;
+}
+
+.preview-top {
+  background-color: #111A24;
+  color: #63B7E9;
+  & p {
+    color: #8091a2;
+    &.name {
+      color: #c6d4df;
+      font-weight: bold;
+    }
+  }
+  & .next {
+    background: rgba( 0, 0, 0, 0.2 );
+  }
+}
+
+.recommended {
+  font-size: 16px;
+  color: #d6d7d8;
 }
 
 .spoiler {
