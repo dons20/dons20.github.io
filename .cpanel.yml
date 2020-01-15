@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/claytoni/projects.claytoninnovations.com/
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R index.html $DEPLOYPATH
